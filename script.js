@@ -36,7 +36,7 @@ typeText();
 
 // Change this date if needed.
 const birthdayDate =
-    new Date("September 17, 2026 20:00:00").getTime();
+    new Date("February 03, 2027 20:00:00").getTime();
 
 function updateCountdown() {
 
@@ -449,28 +449,28 @@ const photos = [
         src: "images/Photo1.jpg",
 
         caption:
-            " A tiny miracle has arrived, bringing a lifetime of love into our hearts  💖✨"
+            " The Girl Who Makes Everything Brighter ✨💖✨"
     },
 
     {
         src: "images/Photo2.jpg",
 
         caption:
-            " You may be small, but you have filled our world with a love bigger than words💕💕💕"
+            " One of a Kind, The Beautiful Soul Behind That Tough Exterior 💎💕💕💕"
     },
 
     {
         src: "images/Photo3.jpg",
 
         caption:
-            "In your tiny heartbeat, we found a thousand reasons to smile.🥳🥳🥳"
+            "Memories that stay 🥳🥳🥳"
     },
 
     {
         src: "images/Photo4.jpg",
 
         caption:
-            "Those little fingers and tiny toes have captured our hearts forever.💖💖"
+            "Old moments, warm memories 💖💖"
     }
 
 ];
