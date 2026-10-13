@@ -10,24 +10,19 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     text-align: center;
-    color: #4a2635;
+    color: #333;
 
-    /*
-        BRIGHT PINK BIRTHDAY THEME
-        Vibrant, warm and elegant.
-    */
     background:
         linear-gradient(
             135deg,
-            #f7a8c4,
-            #f477a8,
-            #f9b6ce,
-            #e85d91,
-            #f8a9c4
+            #dff6ff,
+            #bde0fe,
+            #a2d2ff,
+            #e7f5ff
         );
 
     background-size: 400% 400%;
-    animation: gradient 18s ease infinite;
+    animation: gradient 12s ease infinite;
 
     overflow-x: hidden;
 }
@@ -48,36 +43,6 @@ body {
     100% {
         background-position: 0% 50%;
     }
-}
-
-/* Bright soft atmospheric glow */
-
-body::before {
-    content: "";
-
-    position: fixed;
-    inset: 0;
-
-    pointer-events: none;
-
-    background:
-        radial-gradient(
-            circle at 10% 15%,
-            rgba(255, 255, 255, 0.35),
-            transparent 32%
-        ),
-        radial-gradient(
-            circle at 90% 20%,
-            rgba(255, 210, 225, 0.30),
-            transparent 32%
-        ),
-        radial-gradient(
-            circle at 50% 90%,
-            rgba(255, 255, 255, 0.18),
-            transparent 35%
-        );
-
-    z-index: -1;
 }
 
 main {
@@ -106,9 +71,9 @@ main {
     font-size: clamp(40px, 8vw, 75px);
 
     text-shadow:
-        0 0 10px rgba(255, 255, 255, 0.65),
-        0 0 25px rgba(210, 40, 100, 0.35),
-        0 5px 20px rgba(120, 25, 60, 0.20);
+        0 0 10px #2878b5,
+        0 0 20px #2878b5,
+        0 0 40px rgba(40, 120, 181, 0.5);
 
     animation: heartbeat 2s infinite;
 }
@@ -127,10 +92,8 @@ main {
     font-size: clamp(20px, 4vw, 30px);
     min-height: 40px;
 
-    color: white;
-
     text-shadow:
-        0 2px 12px rgba(100, 25, 55, 0.28);
+        0 2px 10px rgba(0, 0, 0, 0.15);
 }
 
 /* =========================================
@@ -138,22 +101,17 @@ main {
 ========================================= */
 
 .card {
-    background:
-        rgba(255, 250, 252, 0.96);
+    background: rgba(255, 255, 255, 0.9);
 
     margin: 30px 0;
     padding: 35px 25px;
 
     border-radius: 25px;
 
-    border:
-        1px solid rgba(255, 255, 255, 0.75);
-
     box-shadow:
-        0 15px 40px rgba(125, 35, 70, 0.20);
+        0 15px 40px rgba(0, 0, 0, 0.15);
 
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(10px);
 
     transition:
         transform 0.4s ease,
@@ -164,16 +122,15 @@ main {
     transform: translateY(-4px);
 
     box-shadow:
-        0 20px 50px rgba(125, 35, 70, 0.28);
+        0 20px 50px rgba(0, 0, 0, 0.18);
 }
 
 .card h2 {
-    color: #e05287;
-
+    color: #2878b5;
     font-size: 32px;
 
     text-shadow:
-        0 2px 8px rgba(224, 82, 135, 0.20);
+        0 2px 8px rgba(40, 120, 181, 0.15);
 }
 
 /* =========================================
@@ -191,9 +148,8 @@ button {
     background:
         linear-gradient(
             45deg,
-            #e85d91,
-            #f477a8,
-            #ee6b9b
+            #2878b5,
+            #5aa9e6
         );
 
     color: white;
@@ -201,7 +157,7 @@ button {
     cursor: pointer;
 
     box-shadow:
-        0 8px 20px rgba(205, 55, 105, 0.35);
+        0 8px 20px rgba(40, 120, 181, 0.3);
 
     transition:
         transform 0.3s ease,
@@ -209,12 +165,10 @@ button {
 }
 
 button:hover {
-    transform:
-        translateY(-3px)
-        scale(1.05);
+    transform: translateY(-3px) scale(1.05);
 
     box-shadow:
-        0 12px 28px rgba(205, 55, 105, 0.48);
+        0 12px 28px rgba(40, 120, 181, 0.45);
 }
 
 button:active {
@@ -234,7 +188,7 @@ button:active {
     font-size: 28px;
     font-weight: bold;
 
-    color: #dc4f83;
+    color: #2878b5;
 }
 
 /* =========================================
@@ -246,29 +200,25 @@ button:active {
     overflow: hidden;
 }
 
-/*
-    Bright pink glow behind the gift.
-*/
+/* Soft glowing circle behind the gift */
 
 .gift-section::before {
     content: "";
 
     position: absolute;
 
-    width: 300px;
-    height: 300px;
+    width: 260px;
+    height: 260px;
 
     left: 50%;
     top: 55%;
 
-    transform:
-        translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 
     background:
         radial-gradient(
             circle,
-            rgba(255, 108, 160, 0.32),
-            rgba(255, 190, 215, 0.22),
+            rgba(90, 169, 230, 0.3),
             transparent 70%
         );
 
@@ -294,45 +244,37 @@ button:active {
 
     filter:
         drop-shadow(
-            0 10px 15px rgba(175, 45, 90, 0.25)
+            0 10px 15px rgba(40, 120, 181, 0.25)
         );
 
-    animation:
-        giftFloat 2.5s ease-in-out infinite;
+    animation: giftFloat 2.5s ease-in-out infinite;
 }
+
+/* Gentle floating animation before opening */
 
 @keyframes giftFloat {
     0%, 100% {
-        transform:
-            translateY(0)
-            rotate(-2deg);
+        transform: translateY(0) rotate(-2deg);
     }
 
     50% {
-        transform:
-            translateY(-10px)
-            rotate(2deg);
+        transform: translateY(-10px) rotate(2deg);
     }
 }
 
 .gift:hover {
-    transform:
-        scale(1.15)
-        rotate(5deg);
+    transform: scale(1.15) rotate(5deg);
 
     filter:
         drop-shadow(
-            0 0 25px rgba(255, 90, 150, 0.85)
+            0 0 25px rgba(40, 120, 181, 0.7)
         );
 }
 
-/* =========================================
-   GIFT OPENING
-========================================= */
+/* Gift opening animation */
 
 .gift.open {
-    animation:
-        giftOpen 1.2s ease forwards;
+    animation: giftOpen 1.2s ease forwards;
 }
 
 @keyframes giftOpen {
@@ -343,7 +285,7 @@ button:active {
 
         filter:
             drop-shadow(
-                0 10px 15px rgba(175, 45, 90, 0.25)
+                0 10px 15px rgba(40, 120, 181, 0.25)
             );
     }
 
@@ -372,7 +314,7 @@ button:active {
 
         filter:
             drop-shadow(
-                0 0 40px rgba(255, 170, 205, 0.95)
+                0 0 40px rgba(255, 215, 100, 1)
             );
     }
 
@@ -396,9 +338,7 @@ button:active {
     }
 }
 
-/* =========================================
-   GIFT BURST
-========================================= */
+/* Glow burst created when gift opens */
 
 .gift-burst {
     position: absolute;
@@ -409,8 +349,7 @@ button:active {
     width: 40px;
     height: 40px;
 
-    transform:
-        translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 
     border-radius: 50%;
 
@@ -418,7 +357,7 @@ button:active {
         radial-gradient(
             circle,
             rgba(255, 255, 255, 1),
-            rgba(255, 100, 160, 0.80),
+            rgba(144, 202, 249, 0.8),
             transparent 70%
         );
 
@@ -426,32 +365,31 @@ button:active {
 
     z-index: 1;
 
-    animation:
-        giftBurst 1s ease-out forwards;
+    animation: giftBurst 1s ease-out forwards;
 }
 
 @keyframes giftBurst {
     0% {
         width: 20px;
         height: 20px;
+
         opacity: 1;
     }
 
     100% {
         width: 420px;
         height: 420px;
+
         opacity: 0;
     }
 }
 
-/* =========================================
-   SURPRISE MESSAGE
-========================================= */
+/* Surprise message */
 
 #giftMessage {
     margin-top: 20px;
 
-    color: #dc4f83;
+    color: #2878b5;
 
     font-size: 19px;
 
@@ -564,7 +502,7 @@ button:active {
     border-radius: 20px;
 
     box-shadow:
-        0 10px 30px rgba(125, 35, 70, 0.22);
+        0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 .slideshow img {
@@ -591,16 +529,14 @@ button:active {
 
     top: 50%;
 
-    transform:
-        translateY(-50%);
+    transform: translateY(-50%);
 
     padding: 12px 18px;
 
     background:
-        rgba(210, 55, 105, 0.68);
+        rgba(40, 120, 181, 0.85);
 
     backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
 }
 
 .prev:hover,
@@ -623,7 +559,7 @@ button:active {
 
     font-size: 20px;
 
-    color: #dc4f83;
+    color: #2878b5;
 
     min-height: 30px;
 }
@@ -646,7 +582,7 @@ button:active {
     border-radius: 20px;
 
     box-shadow:
-        0 10px 30px rgba(125, 35, 70, 0.22);
+        0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 .video-container iframe {
@@ -688,12 +624,11 @@ button:active {
     background:
         linear-gradient(
             to bottom,
-            #f477a8,
-            #e05287
+            #2878b5,
+            #90caf9
         );
 
-    transform:
-        translateX(-50%);
+    transform: translateX(-50%);
 }
 
 .timeline-item {
@@ -715,23 +650,21 @@ button:active {
 .timeline-item > div:last-child {
     width: 45%;
 
-    background:
-        #fff8fb;
+    background: #fff;
 
     padding: 15px;
 
     border-radius: 15px;
 
     box-shadow:
-        0 5px 20px rgba(125, 35, 70, 0.14);
+        0 5px 20px rgba(0, 0, 0, 0.1);
 
     transition:
         transform 0.3s ease;
 }
 
 .timeline-item > div:last-child:hover {
-    transform:
-        scale(1.03);
+    transform: scale(1.03);
 }
 
 .timeline-dot {
@@ -740,12 +673,7 @@ button:active {
 
     border-radius: 50%;
 
-    background:
-        linear-gradient(
-            135deg,
-            #f477a8,
-            #e05287
-        );
+    background: #2878b5;
 
     display: flex;
 
@@ -759,8 +687,8 @@ button:active {
     z-index: 2;
 
     box-shadow:
-        0 0 0 5px rgba(244, 119, 168, 0.18),
-        0 0 20px rgba(224, 82, 135, 0.35);
+        0 0 0 5px rgba(40, 120, 181, 0.15),
+        0 0 20px rgba(40, 120, 181, 0.4);
 
     animation:
         timelinePulse 2s infinite;
@@ -769,14 +697,14 @@ button:active {
 @keyframes timelinePulse {
     0%, 100% {
         box-shadow:
-            0 0 0 5px rgba(244, 119, 168, 0.18),
-            0 0 20px rgba(224, 82, 135, 0.32);
+            0 0 0 5px rgba(40, 120, 181, 0.15),
+            0 0 20px rgba(40, 120, 181, 0.3);
     }
 
     50% {
         box-shadow:
-            0 0 0 10px rgba(244, 119, 168, 0.10),
-            0 0 30px rgba(224, 82, 135, 0.48);
+            0 0 0 10px rgba(40, 120, 181, 0.08),
+            0 0 30px rgba(40, 120, 181, 0.5);
     }
 }
 
@@ -939,8 +867,7 @@ button:active {
     }
 
     .hero h1 {
-        font-size:
-            clamp(38px, 12vw, 60px);
+        font-size: clamp(38px, 12vw, 60px);
     }
 
     .card {
